@@ -1,6 +1,9 @@
 import "./App.css";
+type myTopicsType = {
+  [topic: string]: string[];
+};
 
-const myTopics = {
+const myTopics: myTopicsType = {
   CSS: ["Flexbox", "Grid", "flux", "Sass", "tailwind"],
   OOP: [
     "Classes",
@@ -53,7 +56,7 @@ const myTopics = {
     "controlled components",
     "uncontrolled components",
   ],
-  "Frontend Libraries": ["Redux", "react-router", "Tanstack-Query"],
+  frontendLibraries: ["Redux", "react-router", "Tanstack-Query"],
   Git: [
     "git rebase",
     "git merge",
@@ -78,8 +81,8 @@ const myTopics = {
     "git show",
     "git diff",
   ],
-  "Frontend Frameworks": ["React", "Angular", "Next.js"],
-  "Data Structures": [
+  frontendFrameworks: ["React", "Angular", "Next.js"],
+  dataStructures: [
     "Arrays",
     "Linked Lists",
     "Stacks",
@@ -89,7 +92,7 @@ const myTopics = {
     "Hash Tables",
   ],
   Algorithms: ["Sorting", "Searching", "Divide and Conquer"],
-  "Backend Frameworks": ["Express", "Nest.js", "Fastify"],
+  backendFrameworks: ["Express", "Nest.js", "Fastify"],
   SQL: [
     "select",
     "insert",
@@ -112,10 +115,73 @@ const myTopics = {
     "triggers",
     "stored procedures",
   ],
+  terminalCommands: [
+    "cd",
+    "ls",
+    "pwd",
+    "touch",
+    "mkdir",
+    "rm",
+    "rmdir",
+    "mv",
+    "cp",
+    "cat",
+    "echo",
+    "clear",
+    "history",
+    "curl",
+    "nano",
+    "less",
+    "grep",
+    "find",
+    "tar",
+    "zip",
+    "unzip",
+    "ssh",
+    "tail",
+    "head",
+    "kill",
+    "ps",
+    "sed",
+    "awk",
+    "chmod",
+    "chown",
+  ],
+};
+
+const TopicList: React.FC<{ topics: myTopicsType }> = ({ topics }) => {
+  return (
+    <div>
+      {Object.entries(topics).map(([topicKey, subtopics]) => (
+        <Topic key={topicKey} topicName={topicKey} subtopics={subtopics} />
+      ))}
+    </div>
+  );
+};
+
+const Topic: React.FC<{ topicName: string; subtopics: string[] }> = ({
+  topicName,
+  subtopics,
+}) => {
+  return (
+    <div>
+      <h2>{topicName}</h2>
+      <ul>
+        {subtopics.map((subtopic, index) => (
+          <li key={index}>{subtopic}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <h1>Topics</h1>
+      <TopicList topics={myTopics} />
+    </>
+  );
 }
 
 export default App;
