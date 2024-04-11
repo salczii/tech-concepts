@@ -1,35 +1,121 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+
+const myTopics = {
+  CSS: ["Flexbox", "Grid", "flux", "Sass", "tailwind"],
+  OOP: [
+    "Classes",
+    "Inheritance",
+    "Polymorphism",
+    "Encapsulation",
+    "Abstraction",
+    "Interfaces",
+    "Abstract Classes",
+  ],
+  React: [
+    "state",
+    "props",
+    "useEffect",
+    "useContext",
+    "useReducer",
+    "useRef",
+    "useMemo",
+    "useCallback",
+    "custom hooks",
+    "context",
+    "reducer",
+    "portals",
+    "fragments",
+    "error boundaries",
+    "forward refs",
+    "memo",
+    "lazy",
+    "suspense",
+    "concurrent mode",
+    "strict mode",
+    "render props",
+    "higher order components",
+    "controlled components",
+    "uncontrolled components",
+    "hooks",
+    "context",
+    "refs",
+    "portals",
+    "fragments",
+    "error boundaries",
+    "forward refs",
+    "memo",
+    "lazy",
+    "suspense",
+    "concurrent mode",
+    "strict mode",
+    "render props",
+    "higher order components",
+    "controlled components",
+    "uncontrolled components",
+  ],
+  "Frontend Libraries": ["Redux", "react-router", "Tanstack-Query"],
+  Git: [
+    "git rebase",
+    "git merge",
+    "git pull",
+    "git push",
+    "git clone",
+    "git init",
+    "git add",
+    "git commit",
+    "git status",
+    "git log",
+    "git branch",
+    "git checkout",
+    "git reset",
+    "git revert",
+    "git stash",
+    "git cherry-pick",
+    "git reflog",
+    "git tag",
+    "git fetch",
+    "git remote",
+    "git show",
+    "git diff",
+  ],
+  "Frontend Frameworks": ["React", "Angular", "Next.js"],
+  "Data Structures": [
+    "Arrays",
+    "Linked Lists",
+    "Stacks",
+    "Queues",
+    "Trees",
+    "Graphs",
+    "Hash Tables",
+  ],
+  Algorithms: ["Sorting", "Searching", "Divide and Conquer"],
+  "Backend Frameworks": ["Express", "Nest.js", "Fastify"],
+  SQL: [
+    "select",
+    "insert",
+    "update",
+    "delete",
+    "joins",
+    "group by",
+    "having",
+    "order by",
+    "limit",
+    "offset",
+    "distinct",
+    "subqueries",
+    "unions",
+    "views",
+    "indexes",
+    "transactions",
+    "constraints",
+    "functions",
+    "triggers",
+    "stored procedures",
+  ],
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  return <></>;
 }
 
-export default App
+export default App;
